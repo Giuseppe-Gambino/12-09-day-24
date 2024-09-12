@@ -23,40 +23,9 @@ p {
   flex-wrap: wrap;
   gap: 1rem;
 
-  width: 100%;
+  width: 1350px;
   padding: 3rem;
   margin: 2rem;
-}
-
-.postit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 21%;
-  height: 200px;
-  background: linear-gradient(145deg, #ffffd6, #e0e1b4);
-  margin: 1rem;
-
-  position: relative;
-  animation: caduta 1s forwards;
-  opacity: 0;
-}
-
-@keyframes caduta {
-  from {
-    transform: perspective(100rem) translateZ(100rem);
-    opacity: 0;
-  }
-  to {
-    transform: perspective(0%) scale(1);
-    opacity: 1;
-  }
-}
-
-.postit:hover {
-  transition: 250ms;
-  transform: rotate(0);
-  transform: scale(1.2);
 }
 
 .rotate1 {
@@ -71,34 +40,64 @@ p {
   transform: rotate(-4deg);
 }
 
+.postit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21%;
+  height: 200px;
+  background: linear-gradient(145deg, #ffffd6, #e0e1b4);
+  margin: 1rem;
+
+  position: relative;
+  animation: caduta 1s both;
+  opacity: 0;
+  transition: transform 250ms;
+}
+
+@keyframes caduta {
+  from {
+    transform: perspective(100rem) translateZ(100rem);
+    opacity: 0;
+  }
+  to {
+    transform: perspective(0%);
+    opacity: 1;
+  }
+}
+
+.postit:hover {
+  transform: scale(1.2) rotate(0);
+}
+
 .postit:nth-child(1) {
-  animation-delay: 0s; /* Inizio immediato per il primo */
+  animation-delay: 0s;
 }
 
 .postit:nth-child(2) {
-  animation-delay: 0.5s; /* Ritardo di 0.5 secondi */
+  animation-delay: 0.5s;
 }
 
 .postit:nth-child(3) {
-  animation-delay: 1s; /* Ritardo di 1 secondo */
+  animation-delay: 1s;
 }
 
 .postit:nth-child(4) {
-  animation-delay: 1.5s; /* Ritardo di 1.5 secondi */
+  animation-delay: 1.5s;
 }
 
 .postit:nth-child(5) {
-  animation-delay: 2s; /* Ritardo di 2 secondi */
+  animation-delay: 2s;
 }
 
 .postit:nth-child(6) {
-  animation-delay: 2.5s; /* Ritardo di 2.5 secondi */
+  animation-delay: 2.5s;
 }
 
 .postit:nth-child(7) {
-  animation-delay: 3s; /* Ritardo di 3 secondi */
+  animation-delay: 3s;
 }
 
 .postit:nth-child(8) {
-  animation-delay: 3.5s; /* Ritardo di 3.5 secondi */
+  animation-delay: 3.5s;
 }
