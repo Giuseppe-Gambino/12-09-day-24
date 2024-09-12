@@ -1,0 +1,72 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h2,
+p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.lavagna {
+  background-color: #666666;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  width: 100%;
+  padding: 3rem;
+  margin: 2rem;
+}
+
+.postit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 21%;
+  height: 200px;
+  background: linear-gradient(145deg, #ffffd6, #e0e1b4);
+  margin: 1rem;
+  transition: 200ms;
+
+  position: relative;
+  animation: caduta 1s;
+}
+
+@keyframes caduta {
+  from {
+    transform: translateY(-300px) rotate(-10deg) scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.postit:hover {
+  transition: 250ms;
+  transform: rotate(0);
+  transform: scale(1.2);
+}
+
+.rotate1 {
+  transform: rotate(7deg);
+}
+
+.rotate2 {
+  transform: rotate(-6deg);
+}
+
+.rotate3 {
+  transform: rotate(-4deg);
+}
