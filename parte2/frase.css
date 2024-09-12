@@ -8,3 +8,13 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#testoAlternato {
+  border: 2px solid lightseagreen;
+}

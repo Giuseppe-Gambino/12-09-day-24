@@ -52,7 +52,13 @@ p {
   position: relative;
   animation: caduta 1s both;
   opacity: 0;
-  transition: transform 250ms;
+  transition: 250ms;
+}
+
+.postit:hover {
+  transition: 300ms;
+  scale: 1.2;
+  transform: rotate(0deg);
 }
 
 @keyframes caduta {
@@ -64,10 +70,6 @@ p {
     transform: perspective(0%);
     opacity: 1;
   }
-}
-
-.postit:hover {
-  transform: scale(1.2) rotate(0);
 }
 
 .postit:nth-child(1) {
