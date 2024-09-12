@@ -36,19 +36,19 @@ p {
   height: 200px;
   background: linear-gradient(145deg, #ffffd6, #e0e1b4);
   margin: 1rem;
-  transition: 200ms;
 
   position: relative;
-  animation: caduta 1s;
+  animation: caduta 1s forwards;
+  opacity: 0;
 }
 
 @keyframes caduta {
   from {
-    transform: translateY(-300px) rotate(-10deg) scale(1.5);
+    transform: perspective(100rem) translateZ(100rem);
     opacity: 0;
   }
   to {
-    transform: translateY(0) scale(1);
+    transform: perspective(0%) scale(1);
     opacity: 1;
   }
 }
@@ -69,4 +69,36 @@ p {
 
 .rotate3 {
   transform: rotate(-4deg);
+}
+
+.postit:nth-child(1) {
+  animation-delay: 0s; /* Inizio immediato per il primo */
+}
+
+.postit:nth-child(2) {
+  animation-delay: 0.5s; /* Ritardo di 0.5 secondi */
+}
+
+.postit:nth-child(3) {
+  animation-delay: 1s; /* Ritardo di 1 secondo */
+}
+
+.postit:nth-child(4) {
+  animation-delay: 1.5s; /* Ritardo di 1.5 secondi */
+}
+
+.postit:nth-child(5) {
+  animation-delay: 2s; /* Ritardo di 2 secondi */
+}
+
+.postit:nth-child(6) {
+  animation-delay: 2.5s; /* Ritardo di 2.5 secondi */
+}
+
+.postit:nth-child(7) {
+  animation-delay: 3s; /* Ritardo di 3 secondi */
+}
+
+.postit:nth-child(8) {
+  animation-delay: 3.5s; /* Ritardo di 3.5 secondi */
 }
